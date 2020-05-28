@@ -11,4 +11,4 @@ if ($conn && $conn->connect_error) {
     die('Si è verificato un errore');
 }
 
-echo 'Hello db';
+
