@@ -8,6 +8,12 @@ include __DIR__ . '/partials/home/server.php';
 include __DIR__ . '/partials/templates/head.php'
 ?>
 
+<?php //alerts se  non è vuoto fai questo
+    if(! empty($_GET['del']) ) { ?>
+    <div class="alert alert-success">
+        Stanza cancellata
+    </div>
+<?php } ?>
 
 
 <main class="container">
@@ -44,7 +50,13 @@ include __DIR__ . '/partials/templates/head.php'
                                     </a>
                                 </td>
                                 <td class="text-primary">Update</td>
-                                <td class="text-danger">Delete</td>
+                                <td class="text-danger">
+                                    <form action="./partials/delete/server.php"
+                                    method="POST" >
+                                        <input type="hidden" name="id" value="<?php echo $room['id']?>">
+                                        <input class="btn btn-danger" type="submit" value="Delete">
+                                    </form>
+                                </td>
                             </tr>
                         <?php }
                     }
