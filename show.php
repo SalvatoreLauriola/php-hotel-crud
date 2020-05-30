@@ -37,7 +37,10 @@ include __DIR__ . '/partials/templates/head.php'
                 </ul>
             </div>
 
-            <a href="./">&lt; indietro</a>
+            <a class="btn btn-primary" 
+            href="<?php echo $base_path; ?>/edit.php?id=<?php echo $room['id']; ?>">
+                Update
+            </a>
 
 
         </div>
