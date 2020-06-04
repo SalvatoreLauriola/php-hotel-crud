@@ -52,3 +52,22 @@ function getById($conn, $table, $id) {
     return $record;
 
 }
+
+
+// Delete a record by ID
+function removeById($conn, $table, $id, $url) {
+    $sql = "DELETE FROM `$table` WHERE `id` = $id";
+    $result = $conn->query($sql);
+
+    var_dump($result);
+
+    if($result && $conn ->affected_rows > 0){
+        header("Location: $url");
+    } elseif($result) {
+        die('Nessuna stanza trovata');
+    } else {
+        die('Si è verificato un errore');
+    }
+
+    $conn->close();
+}

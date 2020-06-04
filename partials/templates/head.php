@@ -29,6 +29,10 @@ include_once __DIR__ . '/../../env.php';
                 <a class="nav-link" href="<?php echo $base_path; ?>create.php">
                     New room</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo $base_path; ?>bookings.php">
+                    Bookings</a>
+            </li>
         </ul>
     </nav>
 </header>

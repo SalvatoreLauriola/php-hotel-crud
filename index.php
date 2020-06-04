@@ -49,13 +49,13 @@ include __DIR__ . '/partials/templates/head.php'
                                         View
                                     </a>
                                 </td>
-                                <td>
+                                <td class= "text-right">
                                 <a class="text-primary"
                                     href="./edit.php?id=<?php echo $room['id']?>">
                                         Update
                                     </a>
                                 </td>
-                                <td class="text-danger">
+                                <td class="text-right">
                                     <form action="./partials/delete/server.php"
                                     method="POST" >
                                         <input type="hidden" name="id" value="<?php echo $room['id']?>">

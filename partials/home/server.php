@@ -29,4 +29,4 @@ $rooms = getAll($conn, 'stanze');
 
 
 // //close db connection
-// $conn->close();
+// $conn->close(); 
